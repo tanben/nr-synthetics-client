@@ -1,20 +1,25 @@
 {
-  "name": "nr-synthetics-client",
+  "name": "@tanben/nr-synthetics-client",
   "version": "0.1.0",
   "description": "",
   "homepage": "",
   "author": {
     "name": "Benedicto Tan",
     "email": "ben.tan.dev@gmail.com",
-    "url": "https://github.com/tanben/nr-synthetics-client"
+    "url": "https://github.com/tanben"
   },
   "files": [
     "lib"
   ],
+  "bugs": {
+    "url": "https://github.com/tanben/nr-synthetics-client/issues"
+  },
   "main": "lib/index.js",
   "keywords": [
-    ""
+    "new relic", "synthetics"
   ],
+  "repository": "git://github.com/tanben/nr-synthetics-client.git",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "devDependencies": {
     "coveralls": "^3.0.7",
     "eslint": "^6.6.0",
