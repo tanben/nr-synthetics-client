@@ -7,47 +7,19 @@ A New Relic [Synthetics REST API v3](https://docs.newrelic.com/docs/apis/synthet
 
 
 ## Installation
+Update your package.json and include this line in the dependencies:
+```
+  "dependencies": {
 
-```sh
-$ npm install --save nr-synthetics-client
+    "nr-synthetics-client": "git+https://github.com/tanben/nr-synthetics-client.git"
+
+  }
 ```
 
 ## Usage
 
 ```js
-const syntheticsMgr = require('nr-synthetics-client');
-
-
-```
-## Testing
-1. Copy `.nrconfig.json.tmpl` to `.nrconfig.json` in your project root directory
-2. Edit `nrconfig.json` and update with your admin api key and a test monitor Id.
-3. run test
-
-```
-npm run test
-```
-
-###  [Synthetics monitoring attributes](https://docs.newrelic.com/docs/apis/synthetics-rest-api/monitor-examples/payload-attributes-synthetics-rest-api#api-attributes)
-```
- {
-    monitors: {
-        id: string;
-        name: string;
-        type: string;
-        frequency: number;
-        uri: string;
-        locations: string[];
-        status: string;
-        slaThreshold: number;
-        options: {};
-        modifiedAt: string;
-        createdAt: string;
-        userId: number;
-        apiVersion: string;
-    }[];
-    count: number;
-}
+const syntheticsClient = require('nr-synthetics-client');
 ```
 
 ## API
@@ -80,18 +52,43 @@ uploadScripts(monitorNames: any): Promise<void>
 
 ```
 
-# Sample  Download / Upload Monitors
+
+
+###  [Synthetics Monitor attributes](https://docs.newrelic.com/docs/apis/synthetics-rest-api/monitor-examples/payload-attributes-synthetics-rest-api#api-attributes)
+```
+ {
+    monitors: {
+        id: string;
+        name: string;
+        type: string;
+        frequency: number;
+        uri: string;
+        locations: string[];
+        status: string;
+        slaThreshold: number;
+        options: {};
+        modifiedAt: string;
+        createdAt: string;
+        userId: number;
+        apiVersion: string;
+    }[];
+    count: number;
+}
+```
+
+
+# Sample  Download / Upload Monitor App
 ### Pre-requisite
 1. Install NPM packages by running `npm install`
 2. Copy `.nrconfig.json.tmpl` to `.nrconfig.json` update the JSON file with your admin api key.
 
-1. Run  `npm run download` or `npm run upload`, and select the monitor(s) or `ALL`  to start dowload/upload of monitors. Files including the configuration file are saved in `./monitors` directory.
+1. Run  `npm run download` or `npm run upload`, and select the monitor(s) or `ALL`  to start dowloading/uploading  monitors.  Files including the configuration file are saved in `./monitors` directory.
 
 
 ```
 $ npm run download
 
-Using apiKey: "NRAA-xxxxxx-xxxxxxxx-xxxxxxxx"
+Using apiKey: "xxxx-xxxxxx-xxxxxxxx-xxxxxxxx"
 
 ? Select Monitors (Press <space> to select, <a> to toggle all, <i> to invert selection)
 > ◯ ALL
@@ -101,6 +98,14 @@ Using apiKey: "NRAA-xxxxxx-xxxxxxxx-xxxxxxxx"
   = API Tests = 
  ◯ apiTest-test1
  ◯ apiTest-test2
+
+ 
+ ? Select Monitors ALL
+downloading monitor [scriptedBrowser-test1] id=[xxxxxxxxxxxxxxxxxxxxxxxx] type=[SCRIPT_BROWSER] to directory [monitors]
+downloading monitor [scriptedBrowser-test2] id=[xxxxxxxxxxxxxxxxxxxxxxxx] type=[SCRIPT_BROWSER] to directory [monitors]
+downloading monitor [apiTest-test1] id=[xxxxxxxxxxxxxxxxxxxxxxxxxx] type=[SCRIPT_API] to directory [monitors]
+downloading monitor [apiTest-test2] id=[xxxxxxxxxxxxxxxxxxxxxxxxxx] type=[SCRIPT_API] to directory [monitors]
+Download Complete
 
 ```
 

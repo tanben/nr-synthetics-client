@@ -15,12 +15,12 @@ const colorize={
 };
 
 
-const synthManager = require("../lib/index");
+const synthClient = require("../lib/index");
 const {
     apiKey
 } = require("../.nrconfig.json");
 
-const smgr = synthManager({apiKey});
+const smgr = synthClient({apiKey});
 
 // list local monitors that are defined in nr-monitor.json
 const monitors = smgr.listMonitors();

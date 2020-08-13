@@ -15,7 +15,7 @@ const colorize={
 };
 
 
-const synthManager = require("../lib/index");
+const synthClient = require("../lib/index");
 const {
     apiKey
 } = require("../.nrconfig.json");
@@ -23,7 +23,7 @@ const {
 console.log(`Using apiKey: ${colorize.orange(JSON.stringify(apiKey))}`);
 
 (async function () {
-    const smgr = synthManager({
+    const smgr = synthClient({
         apiKey
     });
 
