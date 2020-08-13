@@ -1,0 +1,13 @@
+# packages
+node_modules
+coverage
+
+# test downloaded monitors
+monitors
+
+# configuration file
+nr-testconfig.json
+.nrconfig.json
+
+# rest client test
+*.http
