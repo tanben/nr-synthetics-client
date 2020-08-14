@@ -7,19 +7,29 @@ A New Relic [Synthetics REST API v3](https://docs.newrelic.com/docs/apis/synthet
 
 
 ## Installation
-Update your package.json and include this line in the dependencies:
+
+1. Install package using either:
+```
+npm install @tanben/nr-synthetics-client@0.1.0
+
+```
+OR update your package.json and include this line in the dependencies:
 ```
   "dependencies": {
 
-    "nr-synthetics-client": "git+https://github.com/tanben/nr-synthetics-client.git"
+    "@tanben/nr-synthetics-client": "0.1.0"
 
   }
+```
+2. create a `.npmrc` file in the project root directory and add this line:
+```
+@tanben:registry=https://npm.pkg.github.com
 ```
 
 ## Usage
 
 ```js
-const syntheticsClient = require('nr-synthetics-client');
+const syntheticsClient = require('@tanben/nr-synthetics-client');
 ```
 
 ## API
