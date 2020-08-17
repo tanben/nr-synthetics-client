@@ -1,5 +1,5 @@
 # nr-synthetics-client
-**This is not an official New Relic release, and not supported by New Relic.** 
+[![Version](https://img.shields.io/badge/dynamic/json?color=blue&label=Version&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftanben%2Fnr-synthetics-client%2Fmaster%2Fpackage.json)]() [![NPM](https://img.shields.io/badge/dynamic/json?color=red&label=NPM&query=engines.npm&url=https%3A%2F%2Fraw.githubusercontent.com%2Ftanben%2Fnr-synthetics-client%2Fmaster%2Fpackage.json)]()
 
 
 A New Relic [Synthetics REST API v3](https://docs.newrelic.com/docs/apis/synthetics-rest-api/monitor-examples/manage-synthetics-monitors-rest-api) client.
@@ -8,22 +8,16 @@ A New Relic [Synthetics REST API v3](https://docs.newrelic.com/docs/apis/synthet
 
 ## Installation
 
-1. Install package using either:
+1. Include this package by using either:
 ```
-npm install @tanben/nr-synthetics-client@0.1.0
+npm install  @tanben/nr-synthetics-client@<version>
 
 ```
-OR update your package.json and include this line in the dependencies:
+OR manually include in your package.json  dependencies:
 ```
   "dependencies": {
-
-    "@tanben/nr-synthetics-client": "0.1.0"
-
+    "@tanben/nr-synthetics-client": "^0.1.0"
   }
-```
-2. create a `.npmrc` file in the project root directory and add this line:
-```
-@tanben:registry=https://npm.pkg.github.com
 ```
 
 ## Usage
@@ -121,14 +115,4 @@ Download Complete
 
 ## License
 
-Apache-2.0 © []()
-
-
-[npm-image]: https://badge.fury.io/js/nr-synthetics-client.svg
-[npm-url]: https://npmjs.org/package/nr-synthetics-client
-[travis-image]: https://travis-ci.com//nr-synthetics-client.svg?branch=master
-[travis-url]: https://travis-ci.com//nr-synthetics-client
-[daviddm-image]: https://david-dm.org//nr-synthetics-client.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org//nr-synthetics-client
-[coveralls-image]: https://coveralls.io/repos//nr-synthetics-client/badge.svg
-[coveralls-url]: https://coveralls.io/r//nr-synthetics-client
+Apache-2.0 © [Benedicto Tan](https://github.com/tanben)
